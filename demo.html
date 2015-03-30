@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>sc-link Demo</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="sc-link.html">
+
+</head>
+<body unresolved>
+
+      <sc-link href="http://hipy.co" eventname="sc-select" continue="true">
+        2015RI/00000345
+      </sc-link>
+
+      <script>
+        window.addEventListener('polymer-ready', function(e) {
+          var link = document.querySelector('sc-link');
+          link.addEventListener('sc-select', function(e) {
+            console.log(e.detail.issue);
+          });
+        });
+      </script>
+
+</body>
+</html>

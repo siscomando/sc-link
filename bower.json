@@ -1,0 +1,27 @@
+{
+  "name": "sc-link",
+  "version": "0.0.1",
+  "authors": [
+    "Horacio Ibrahim <horacioibrahim@gmail.com>"
+  ],
+  "description": "sc-link to fire an custom event, open (or not) links in href attributes.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "sc-link"
+  ],
+  "main": "sc-link.html",
+  "license": "MIT",
+  "homepage": "https://github.com/siscomando/sc-link/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}

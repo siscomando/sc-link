@@ -1,0 +1,45 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!--
+sc-link to fire an custom event.
+
+##### Example
+
+      <sc-link href="#" eventname="sc-select" continue="false"></sc-link>
+
+@element sc-link
+@blurb Element providing an element 'a' (link) that to fire events
+@status beta
+@homepage http://github.com/siscomando/sc-link
+-->
+<polymer-element name="sc-link" attributes="eventname continue href colorlink">
+  <template>
+    <style>
+    :host {
+      display: inline;
+      cursor: pointer;
+    }
+    </style>
+    <span class="link" style="color: {{ colorlink }};"><content></content></span>
+  </template>
+  <script>
+    (function () {
+      Polymer('sc-link', {
+        // define element prototype here
+        publish: {
+          eventname: 'sc-select',
+          continue: false,
+          colorlink: '#3367d6'
+        },
+        ready: function () {
+          this.addEventListener('click', function(e) {
+            this.fire(this.eventname, {issue: this.innerText});
+            if (this.continue == true) {
+              location.href = this.href;
+            }
+          });
+        }
+      });
+    })();
+  </script>
+</polymer-element>
