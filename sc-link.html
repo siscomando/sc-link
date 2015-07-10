@@ -36,7 +36,7 @@ sc-link to fire an custom event.
         },
         ready: function () {
           this.addEventListener('click', function(e) {
-            this.fire(this.eventname, {issue: this.innerText});
+            this.fire(this.eventname, {issue: this.textContent});
             if (this.continue == true) {
               location.href = this.href;
             }
